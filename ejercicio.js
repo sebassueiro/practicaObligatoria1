@@ -130,12 +130,7 @@ let watchList = [
 	},
 ];
 
-const returnMovieTitle = (watchlist) => 
- watchlist.filter((item) =>{
-	if (item.Writer = 'Cristopher Nolan' && item.imdbRating > 8.0){
-		return item.Title
-	}
-}).map((item) => item.Title)
+const returnMovieTitle = (watchlist) => watchlist.filter((item) => item.Writer = 'Christopher Nolan' && parseFloat(item.imdbRating) > 8.0).map((item) => item.Title);
 
 const titlesArray = returnMovieTitle(watchList);
 console.log(titlesArray);
